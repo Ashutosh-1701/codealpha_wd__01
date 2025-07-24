@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>🎵 My Music Player</h2>
+    <button id="themeToggle">Toggle Dark/Light Mode</button>
+  </header>
+
+  <input type="file" id="fileInput" accept="audio/*" multiple>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by name...">
+  </div>
+
+  <ul id="playlist"></ul>
+
+  <div class="controls">
+    <button onclick="prevTrack()">⏮️ Prev</button>
+    <button onclick="togglePlay()">▶️ Play/Pause</button>
+    <button onclick="nextTrack()">⏭️ Next</button>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.8">
+  </div>
+
+  <audio id="audioPlayer" controls style="width:100%;"></audio>
+
+  <script src="music.js"></script>
+</body>
+</html>
+
